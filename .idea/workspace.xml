@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="284644e1-d624-47f9-9a54-b509f1cd3fdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/logs/example2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/example1" beforeDir="false" afterPath="$PROJECT_DIR$/client/logs/example1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/example2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/logs/example1" beforeDir="false" afterPath="$PROJECT_DIR$/client/logs/example1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/logs/example2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/logs/subDIr1/ex3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/logs/subDIr1/example3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/logs/example1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/logs/example2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/logs/subDIr1/ex3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/logs/subDIr1/example3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
