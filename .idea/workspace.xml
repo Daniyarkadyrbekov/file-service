@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="284644e1-d624-47f9-9a54-b509f1cd3fdb" name="Default Changelist" comment="" />
+    <list default="true" id="284644e1-d624-47f9-9a54-b509f1cd3fdb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/logs/example2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/example1" beforeDir="false" afterPath="$PROJECT_DIR$/client/logs/example1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/example2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/logs" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
@@ -69,10 +77,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="448" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611109805859">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="741" y="-769" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611201755660">
+      <screen x="144" y="-1080" width="1920" height="1080" />
     </state>
     <state x="448" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/144.-1080.1920.1080@0.0.1440.900" timestamp="1611109805859" />
+    <state x="741" y="-769" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/144.-1080.1920.1080@144.-1080.1920.1080" timestamp="1611201755660" />
     <state x="758" y="-755" key="EditFileWatcherDialog" timestamp="1611110185985">
       <screen x="144" y="-1080" width="1920" height="1080" />
     </state>
