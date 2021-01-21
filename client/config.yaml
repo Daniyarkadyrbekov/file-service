@@ -1,0 +1,2 @@
+server-url: "http://localhost:8080/upload"
+update-period: 1s

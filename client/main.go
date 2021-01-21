@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"crypto/sha256"
-	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -11,12 +10,93 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"time"
+
+	"github.com/ory/viper"
+	"github.com/pkg/errors"
+	"go.uber.org/zap"
 )
 
-var fileHashes = map[string]struct{}{}
+var (
+	errAlreadyExists = errors.New("file already exists on server")
+)
+
+type Service struct {
+	serverUrl    string
+	uploadPeriod time.Duration
+	fileHashes   map[string]struct{}
+	logger       *zap.Logger
+}
+
+func New(cfg *Config, logger *zap.Logger) *Service {
+	return &Service{
+		serverUrl:    cfg.ServerUrl,
+		uploadPeriod: cfg.updatePeriod,
+		logger:       logger,
+		fileHashes:   make(map[string]struct{}),
+	}
+}
+
+func (c *Service) Run() {
+	extraParams := map[string]string{
+		"title":       "My Document",
+		"author":      "Matt Aimonetti",
+		"description": "A document with all the Go programming language secrets",
+	}
+	client := &http.Client{}
+	t := time.NewTicker(30 * time.Second)
+	l := c.logger
+	for {
+		select {
+		case <-t.C:
+
+			l.Debug("ticker loop")
+
+			err := filepath.Walk("./logs",
+				func(path string, info os.FileInfo, err error) error {
+					if info.IsDir() {
+						return nil
+					}
+					l.Debug("fileWalk for file", zap.String("fileName", path))
+
+					request, err := c.newFileUploadRequest(c.serverUrl, extraParams, "myFile", path)
+					if err == errAlreadyExists {
+						return nil
+					}
+					if err != nil {
+						l.Error("getting request err", zap.Error(err))
+						return err
+					}
+					resp, err := client.Do(request)
+					if err != nil {
+						l.Error("making request err", zap.Error(err))
+						return err
+					}
+
+					body := &bytes.Buffer{}
+					_, err = body.ReadFrom(resp.Body)
+					if err != nil {
+						l.Error("reading form err", zap.Error(err))
+						return err
+					}
+					resp.Body.Close()
+					l.Debug("loading file success",
+						zap.Int("code", resp.StatusCode),
+						zap.Any("header", resp.Header),
+						zap.Any("body", body),
+					)
+
+					return nil
+				})
+			if err != nil {
+				l.Error("file path walk err", zap.Error(err))
+			}
+		}
+	}
+}
 
 // Creates a new file upload http request with optional extra params
-func newfileUploadRequest(uri string, params map[string]string, paramName, path string) (*http.Request, error) {
+func (c *Service) newFileUploadRequest(uri string, params map[string]string, paramName, path string) (*http.Request, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
@@ -36,13 +116,13 @@ func newfileUploadRequest(uri string, params map[string]string, paramName, path 
 	h := sha256.New()
 	h.Write([]byte(path))
 	if _, err := io.Copy(h, tee); err != nil {
-		log.Fatal(err)
+		return nil, errors.Wrap(err, "copy to hash err")
 	}
 
-	if _, exists := fileHashes[fmt.Sprintf("%x", h.Sum(nil))]; exists {
-		return nil, errors.New("file already exists on server")
+	if _, exists := c.fileHashes[fmt.Sprintf("%x", h.Sum(nil))]; exists {
+		return nil, errAlreadyExists
 	}
-	fileHashes[fmt.Sprintf("%x", h.Sum(nil))] = struct{}{}
+	c.fileHashes[fmt.Sprintf("%x", h.Sum(nil))] = struct{}{}
 
 	_, err = io.Copy(part, &buf)
 
@@ -61,46 +141,24 @@ func newfileUploadRequest(uri string, params map[string]string, paramName, path 
 
 func main() {
 
-	extraParams := map[string]string{
-		"title":       "My Document",
-		"author":      "Matt Aimonetti",
-		"description": "A document with all the Go programming language secrets",
-	}
-	client := &http.Client{}
-
-	err := filepath.Walk("./logs",
-		func(path string, info os.FileInfo, err error) error {
-			if err != nil {
-				return err
-			}
-			if info.IsDir() {
-				return nil
-			}
-
-			request, err := newfileUploadRequest("http://localhost:8080/upload", extraParams, "myFile", path)
-			if err != nil {
-				return err
-			}
-			resp, err := client.Do(request)
-			if err != nil {
-				log.Fatal(err)
-			} else {
-				body := &bytes.Buffer{}
-				_, err := body.ReadFrom(resp.Body)
-				if err != nil {
-					log.Fatal(err)
-				}
-				resp.Body.Close()
-				fmt.Println(resp.StatusCode)
-				fmt.Println(resp.Header)
-				fmt.Println(body)
-			}
-
-			return nil
-		})
+	l, err := zap.NewDevelopment()
 	if err != nil {
-		log.Println(err)
+		log.Printf("create logger err = %s\n", err.Error())
+		return
 	}
 
-	fmt.Printf("hashes = %v\n", fileHashes)
+	viper.SetConfigFile("config.yaml")
+	if err := viper.ReadInConfig(); err != nil {
+		l.Error("read config", zap.Error(err))
+		return
+	}
+
+	c := &Config{}
+	if err := viper.GetViper().Unmarshal(c); err != nil {
+		l.Error("unmarshal config", zap.Error(err))
+		return
+	}
+
+	svc := New(c, l)
+	svc.Run()
 }
