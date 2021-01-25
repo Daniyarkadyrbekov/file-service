@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="284644e1-d624-47f9-9a54-b509f1cd3fdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/example1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/subdir1/example1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/subdir1/subdir2/example1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/example1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/subdir1/example1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/subdir1/subdir2/example1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,15 +50,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="file-service.git" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build github.com/file-service.git/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="file-service.git" />
       <working_directory value="$PROJECT_DIR$" />
@@ -70,16 +57,6 @@
       <filePath value="$PROJECT_DIR$/client/main.go" />
       <package value="github.com/file-service.git/client" />
       <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="file-service.git" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>

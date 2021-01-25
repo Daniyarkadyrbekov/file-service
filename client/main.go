@@ -44,7 +44,7 @@ func (c *Service) Run() {
 		"description": "A document with all the Go programming language secrets",
 	}
 	client := &http.Client{}
-	t := time.NewTicker(30 * time.Second)
+	t := time.NewTicker(10 * time.Second)
 	l := c.logger
 	for {
 		select {

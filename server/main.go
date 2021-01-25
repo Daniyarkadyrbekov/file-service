@@ -47,6 +47,10 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Successfully Uploaded File\n")
 }
 
+func check(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Successfully checked\n")
+}
+
 func create(p string) (*os.File, error) {
 	if err := os.MkdirAll(filepath.Dir(p), 0770); err != nil {
 		return nil, err
@@ -57,5 +61,6 @@ func create(p string) (*os.File, error) {
 func main() {
 	fmt.Println("Hello World")
 	http.HandleFunc("/upload", uploadFile)
+	http.HandleFunc("/check", check)
 	http.ListenAndServe(":8080", nil)
 }
