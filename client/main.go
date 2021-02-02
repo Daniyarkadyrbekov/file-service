@@ -38,7 +38,9 @@ func New(cfg *Config, logger *zap.Logger) *Service {
 }
 
 func (c *Service) Run() {
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: 5 * time.Second,
+	}
 	t := time.NewTicker(c.cfg.UpdatePeriod)
 	l := c.logger
 	for {
