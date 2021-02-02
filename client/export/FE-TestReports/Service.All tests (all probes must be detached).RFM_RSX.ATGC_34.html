@@ -1,0 +1,3845 @@
+<html xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="cache-control" content="no-store">
+<meta http-equiv="pragma" content="no-cache">
+<style type="text/css">
+                table
+                {
+                border-collapse:collapse;
+                }
+                table, th, td
+                {
+                border: 1px solid black;
+                }
+                td
+                {
+                vertical-align:center;
+                padding: 5px;
+                }
+                body
+                {
+                color:#000000;
+                background-color:#b0c4de
+                }
+                a:link
+                {
+                text-decoration:none;
+                color:#000000
+                }
+                a:visited:
+                {
+                color:#000000
+                }
+                a:focus
+                {
+                color:#000000
+                }
+                a:hover
+                {
+                color:#000000
+                }
+                a:active
+                {
+                color:#000000
+                }
+                .biggerFont { font-weight:bold }
+                .errorBox { background-color:#ff0000; font-weight:bold; color:#ffffff; padding: 5px; }
+                .passedBox { background-color:#00ff00; font-weight:bold; color:#000000; padding: 5px; }
+                .headerBox { background-color:#ffffff; font-weight:bold; color:#000000; padding: 5px; }
+                .sectionBox { background-color:#e4f0fe; font-weight:bold; color:#000000; padding: 5px; }
+            </style>
+</head>
+<body>
+<table cellspacing="5">
+<tr>
+<td valign="center">
+<font class="biggerFont">Testname:</font>
+</td>
+<td valign="center">
+<font class="biggerFont">Service.All tests (all probes must be detached).RFM_RSX.ATGC</font>
+</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Start Time:</font>
+</td>
+<td valign="center">18.January.2021  20:15:21</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">End Time:</font>
+</td>
+<td valign="center">18.January.2021  20:15:22</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Duration:</font>
+</td>
+<td valign="center">00:00:01</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Config File:</font>
+</td>
+<td valign="center">C:\V730\Distribution\Hardware\DAST_Hardware\BF_Test\ATGC.ini</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">SW version:</font>
+</td>
+<td valign="center">EC320 17.0.3.2904  (Dec 06 2016, 04:11:38), BNr.:2904, SysDVD revision: 0</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RFM version:</font>
+</td>
+<td valign="center">PC: RFM423	FR: 10	AR: F	SN: 00945</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RSX version:</font>
+</td>
+<td valign="center">n.A.</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RTF version:</font>
+</td>
+<td valign="center">PC: RTF441	FR: 18	AR: A	SN: 00964</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RTP firmware:</font>
+</td>
+<td valign="center">Monitoring [56] -- Motor [20] -- DC/AC [12]</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Temperature:</font>
+</td>
+<td valign="center">PS: 33.03°C, IF-FPGA: 47.74°C, RFM [BF0: 56.72°C BF1: 55.25°C,  BF2: 61.77°C BF3: 59.18°C]</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Overall Result:</font>
+</td>
+<td valign="center">
+<font class="biggerFont errorBox">FAILED</font>
+</td>
+</tr>
+</table>
+<p class="headerBox">Tables (click to jump to it):</p><a href="#IDMXG4C4TJAEG2M3NBPCJCVGDSHNDCA5EOPD30RVDTZ4FMOF4RV0CJ"><p>ATGC check with maximal attenuation [dB]: (Min: -12.0242 Avg: 6.0100 Max: 57.6421)</p></a><a href="#IDPY2T1L5YZOAHBEYWKP3WDY231CM1YDEPK2N2JDNLMPIGP21TY3BH"><p>ATGC check with minimal attenuation [dB]: (Min: 1.8383 Avg: 15.6264 Max: 59.8456)</p></a><p class="headerBox">Test output:</p>
+<p class="sectionBox"></p>
+<p><a name="IDMXG4C4TJAEG2M3NBPCJCVGDSHNDCA5EOPD30RVDTZ4FMOF4RV0CJ"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">ATGC check with maximal attenuation [dB]: (Min: -12.0242 Avg: 6.0100 Max: 57.6421)</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Channel 000 at RFM</td>
+<td>4.6724</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 001 at RFM</td>
+<td>5.2782</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 002 at RFM</td>
+<td>5.2675</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 003 at RFM</td>
+<td>4.8085</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 004 at RFM</td>
+<td>4.9740</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 005 at RFM</td>
+<td>4.9918</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 006 at RFM</td>
+<td>4.8620</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 007 at RFM</td>
+<td>4.5914</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 008 at RFM</td>
+<td>4.8109</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 009 at RFM</td>
+<td>5.5153</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 010 at RFM</td>
+<td>5.7479</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 011 at RFM</td>
+<td>5.0952</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 012 at RFM</td>
+<td>5.5420</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 013 at RFM</td>
+<td>5.1557</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 014 at RFM</td>
+<td>5.0605</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 015 at RFM</td>
+<td>5.0179</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 016 at RFM</td>
+<td>5.1637</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 017 at RFM</td>
+<td>5.2330</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 018 at RFM</td>
+<td>4.4820</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 019 at RFM</td>
+<td>5.2794</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 020 at RFM</td>
+<td>5.5905</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 021 at RFM</td>
+<td>5.4971</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 022 at RFM</td>
+<td>5.5777</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 023 at RFM</td>
+<td>5.2045</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 024 at RFM</td>
+<td>5.1075</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 025 at RFM</td>
+<td>5.6520</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 026 at RFM</td>
+<td>4.3413</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 027 at RFM</td>
+<td>4.7220</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 028 at RFM</td>
+<td>5.3308</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 029 at RFM</td>
+<td>4.9614</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 030 at RFM</td>
+<td>4.9812</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 031 at RFM</td>
+<td>4.6005</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 032 at RFM</td>
+<td>5.5524</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 033 at RFM</td>
+<td>5.2093</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 034 at RFM</td>
+<td>5.4671</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 035 at RFM</td>
+<td>5.3021</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 036 at RFM</td>
+<td>5.1455</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 037 at RFM</td>
+<td>5.1637</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 038 at RFM</td>
+<td>5.5882</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 039 at RFM</td>
+<td>4.8781</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 040 at RFM</td>
+<td>5.7954</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 041 at RFM</td>
+<td>5.7355</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 042 at RFM</td>
+<td>5.3755</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 043 at RFM</td>
+<td>5.7317</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 044 at RFM</td>
+<td>5.3091</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 045 at RFM</td>
+<td>5.5037</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 046 at RFM</td>
+<td>4.2413</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 047 at RFM</td>
+<td>5.1167</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 048 at RFM</td>
+<td>4.6869</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 049 at RFM</td>
+<td>5.0122</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 050 at RFM</td>
+<td>5.2866</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 051 at RFM</td>
+<td>4.5420</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 052 at RFM</td>
+<td class="errorBox">-9.1027</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 053 at RFM</td>
+<td>4.8440</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 054 at RFM</td>
+<td>5.5006</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 055 at RFM</td>
+<td>5.2281</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 056 at RFM</td>
+<td class="errorBox">-9.4750</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 057 at RFM</td>
+<td>5.1454</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 058 at RFM</td>
+<td>5.0612</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 059 at RFM</td>
+<td>5.1657</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 060 at RFM</td>
+<td class="errorBox">57.1165</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 061 at RFM</td>
+<td>4.9097</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 062 at RFM</td>
+<td>5.4033</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 063 at RFM</td>
+<td>4.1741</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 064 at RFM</td>
+<td>4.6280</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 065 at RFM</td>
+<td class="errorBox">35.9312</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 066 at RFM</td>
+<td>5.2382</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 067 at RFM</td>
+<td>5.0207</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 068 at RFM</td>
+<td>4.8437</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 069 at RFM</td>
+<td class="errorBox">-6.7690</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 070 at RFM</td>
+<td>5.7496</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 071 at RFM</td>
+<td>4.9353</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 072 at RFM</td>
+<td>5.5167</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 073 at RFM</td>
+<td>6.3484</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------------ | --------</td>
+</tr>
+<tr>
+<td>Channel 074 at RFM</td>
+<td>5.7251</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 075 at RFM</td>
+<td>5.2550</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 076 at RFM</td>
+<td>4.7883</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 077 at RFM</td>
+<td class="errorBox">0.0000</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 078 at RFM</td>
+<td>5.9307</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 079 at RFM</td>
+<td>4.6357</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 080 at RFM</td>
+<td>5.3428</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 081 at RFM</td>
+<td>4.8348</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 082 at RFM</td>
+<td>5.0177</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 083 at RFM</td>
+<td>5.2751</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 084 at RFM</td>
+<td>4.9616</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 085 at RFM</td>
+<td>4.3311</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 086 at RFM</td>
+<td>4.7809</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 087 at RFM</td>
+<td>4.3146</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 088 at RFM</td>
+<td>4.7746</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 089 at RFM</td>
+<td>4.9529</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 090 at RFM</td>
+<td>5.4147</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 091 at RFM</td>
+<td>5.1815</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 092 at RFM</td>
+<td>5.4114</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 093 at RFM</td>
+<td>5.4202</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 094 at RFM</td>
+<td>5.2959</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 095 at RFM</td>
+<td>5.0711</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 096 at RFM</td>
+<td>5.2544</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 097 at RFM</td>
+<td>5.6519</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 098 at RFM</td>
+<td>5.7333</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 099 at RFM</td>
+<td>6.0916</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 100 at RFM</td>
+<td>5.6967</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 101 at RFM</td>
+<td>4.9683</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 102 at RFM</td>
+<td>5.1329</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 103 at RFM</td>
+<td>4.7013</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 104 at RFM</td>
+<td>5.1480</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 105 at RFM</td>
+<td>5.3495</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 106 at RFM</td>
+<td>5.4900</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 107 at RFM</td>
+<td>5.5732</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 108 at RFM</td>
+<td>5.3621</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 109 at RFM</td>
+<td>5.4635</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 110 at RFM</td>
+<td>5.4004</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 111 at RFM</td>
+<td>5.3381</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 112 at RFM</td>
+<td>5.1900</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 113 at RFM</td>
+<td>5.4088</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 114 at RFM</td>
+<td>4.9061</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 115 at RFM</td>
+<td>4.0503</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 116 at RFM</td>
+<td>5.2020</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 117 at RFM</td>
+<td>5.2726</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 118 at RFM</td>
+<td>5.5370</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 119 at RFM</td>
+<td>5.7288</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 120 at RFM</td>
+<td>5.3458</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 121 at RFM</td>
+<td>5.7772</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 122 at RFM</td>
+<td>5.6683</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 123 at RFM</td>
+<td>5.6694</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 124 at RFM</td>
+<td>5.3852</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 125 at RFM</td>
+<td>4.8655</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 126 at RFM</td>
+<td>5.2505</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 127 at RFM</td>
+<td>5.0684</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 128 at RFM</td>
+<td>5.1632</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 129 at RFM</td>
+<td>4.6290</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 130 at RFM</td>
+<td>5.1926</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 131 at RFM</td>
+<td>5.6068</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 132 at RFM</td>
+<td>5.3634</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 133 at RFM</td>
+<td>4.9965</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 134 at RFM</td>
+<td>5.4904</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 135 at RFM</td>
+<td>5.5879</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 136 at RFM</td>
+<td>5.0400</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 137 at RFM</td>
+<td>5.0898</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 138 at RFM</td>
+<td>5.0242</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 139 at RFM</td>
+<td>8.2396</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------------- | ----</td>
+</tr>
+<tr>
+<td>Channel 140 at RFM</td>
+<td>4.9095</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 141 at RFM</td>
+<td>5.1686</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 142 at RFM</td>
+<td>4.9400</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 143 at RFM</td>
+<td>4.5114</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 144 at RFM</td>
+<td>5.6539</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 145 at RFM</td>
+<td>5.1866</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 146 at RFM</td>
+<td>5.2092</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 147 at RFM</td>
+<td>4.9213</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 148 at RFM</td>
+<td>5.0356</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 149 at RFM</td>
+<td>5.3327</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 150 at RFM</td>
+<td>5.2810</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 151 at RFM</td>
+<td>5.1658</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 152 at RFM</td>
+<td>5.5990</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 153 at RFM</td>
+<td>5.1251</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 154 at RFM</td>
+<td>5.5062</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 155 at RFM</td>
+<td>5.5949</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 156 at RFM</td>
+<td>5.4505</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 157 at RFM</td>
+<td>5.0074</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 158 at RFM</td>
+<td>4.8227</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 159 at RFM</td>
+<td>5.1575</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 160 at RFM</td>
+<td>5.1606</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 161 at RFM</td>
+<td>4.8323</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 162 at RFM</td>
+<td>5.9652</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 163 at RFM</td>
+<td>5.3562</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 164 at RFM</td>
+<td>5.8213</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 165 at RFM</td>
+<td>5.3037</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 166 at RFM</td>
+<td>5.7741</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 167 at RFM</td>
+<td>5.0226</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 168 at RFM</td>
+<td>5.0787</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 169 at RFM</td>
+<td>5.4981</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 170 at RFM</td>
+<td>5.0270</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 171 at RFM</td>
+<td>4.1307</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 172 at RFM</td>
+<td>5.3635</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 173 at RFM</td>
+<td>5.5650</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 174 at RFM</td>
+<td>5.1529</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 175 at RFM</td>
+<td>5.2648</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 176 at RFM</td>
+<td>5.2604</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 177 at RFM</td>
+<td>5.4166</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 178 at RFM</td>
+<td>6.0592</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 179 at RFM</td>
+<td>5.4814</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 180 at RFM</td>
+<td>4.5596</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 181 at RFM</td>
+<td>5.4233</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 182 at RFM</td>
+<td class="errorBox">-12.0242</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 183 at RFM</td>
+<td>5.6670</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 184 at RFM</td>
+<td>5.0072</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 185 at RFM</td>
+<td>4.8248</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 186 at RFM</td>
+<td class="errorBox">25.8747</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 187 at RFM</td>
+<td>4.6445</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 188 at RFM</td>
+<td>5.1981</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 189 at RFM</td>
+<td>5.5540</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 190 at RFM</td>
+<td class="errorBox">-2.4790</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 191 at RFM</td>
+<td>4.3025</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 192 at RFM</td>
+<td>4.8620</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 193 at RFM</td>
+<td>5.1236</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 194 at RFM</td>
+<td>5.5298</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 195 at RFM</td>
+<td class="errorBox">48.3012</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 196 at RFM</td>
+<td>4.8685</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 197 at RFM</td>
+<td>5.8109</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 198 at RFM</td>
+<td>5.6916</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 199 at RFM</td>
+<td class="errorBox">57.4595</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 200 at RFM</td>
+<td>5.4415</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 201 at RFM</td>
+<td>5.2483</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 202 at RFM</td>
+<td>5.7986</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 203 at RFM</td>
+<td class="errorBox">57.6421</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 204 at RFM</td>
+<td>5.1418</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 205 at RFM</td>
+<td>5.0432</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 206 at RFM</td>
+<td>4.6569</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 207 at RFM</td>
+<td class="errorBox">37.6836</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 208 at RFM</td>
+<td>4.6243</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 209 at RFM</td>
+<td>4.3564</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 210 at RFM</td>
+<td>5.1027</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 211 at RFM</td>
+<td>6.1310</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 212 at RFM</td>
+<td>4.7885</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 213 at RFM</td>
+<td>4.4137</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 214 at RFM</td>
+<td>5.2222</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 215 at RFM</td>
+<td>4.5720</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 216 at RFM</td>
+<td>5.3145</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 217 at RFM</td>
+<td>4.4395</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 218 at RFM</td>
+<td>3.7772</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 219 at RFM</td>
+<td>5.3162</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 220 at RFM</td>
+<td>4.9090</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 221 at RFM</td>
+<td>5.1274</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 222 at RFM</td>
+<td>5.3194</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 223 at RFM</td>
+<td>5.2385</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 224 at RFM</td>
+<td>4.8502</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 225 at RFM</td>
+<td>5.1204</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 226 at RFM</td>
+<td>5.4951</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 227 at RFM</td>
+<td>5.8511</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 228 at RFM</td>
+<td>4.4612</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 229 at RFM</td>
+<td>4.9001</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 230 at RFM</td>
+<td>4.9924</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 231 at RFM</td>
+<td>5.6869</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 232 at RFM</td>
+<td>4.7804</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 233 at RFM</td>
+<td>5.3459</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 234 at RFM</td>
+<td>5.2512</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 235 at RFM</td>
+<td>5.3700</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 236 at RFM</td>
+<td>4.7241</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 237 at RFM</td>
+<td>3.8861</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 238 at RFM</td>
+<td>5.8935</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>----------- | ---------</td>
+</tr>
+<tr>
+<td>Channel 239 at RFM</td>
+<td>4.7618</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 240 at RFM</td>
+<td>5.1770</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 241 at RFM</td>
+<td>4.4151</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 242 at RFM</td>
+<td>5.4730</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 243 at RFM</td>
+<td>5.5266</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 244 at RFM</td>
+<td>5.2610</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 245 at RFM</td>
+<td>4.9682</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 246 at RFM</td>
+<td>4.8217</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 247 at RFM</td>
+<td>5.1146</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 248 at RFM</td>
+<td>5.4669</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Channel 249 at RFM</td>
+<td>5.2747</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 250 at RFM</td>
+<td>5.1418</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 251 at RFM</td>
+<td>5.1987</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 252 at RFM</td>
+<td>5.2553</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 253 at RFM</td>
+<td>4.6713</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 254 at RFM</td>
+<td>4.4499</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 255 at RFM</td>
+<td>5.3691</td>
+<td>1.0000</td>
+<td>10.0000</td>
+<td>---------- | ----------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox"></p>
+<p><a name="IDPY2T1L5YZOAHBEYWKP3WDY231CM1YDEPK2N2JDNLMPIGP21TY3BH"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">ATGC check with minimal attenuation [dB]: (Min: 1.8383 Avg: 15.6264 Max: 59.8456)</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Channel 000 at RFM</td>
+<td>14.2759</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 001 at RFM</td>
+<td>13.8252</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 002 at RFM</td>
+<td>14.0411</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 003 at RFM</td>
+<td>14.1061</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 004 at RFM</td>
+<td>14.3510</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 005 at RFM</td>
+<td>14.6253</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 006 at RFM</td>
+<td>14.5023</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 007 at RFM</td>
+<td>13.6573</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 008 at RFM</td>
+<td>14.1980</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 009 at RFM</td>
+<td>14.5750</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 010 at RFM</td>
+<td>14.5707</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 011 at RFM</td>
+<td>15.0365</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 012 at RFM</td>
+<td>14.1465</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 013 at RFM</td>
+<td>14.2423</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 014 at RFM</td>
+<td>13.9361</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 015 at RFM</td>
+<td>14.2793</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 016 at RFM</td>
+<td>14.6977</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 017 at RFM</td>
+<td>13.7267</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 018 at RFM</td>
+<td>13.0649</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>Channel 019 at RFM</td>
+<td>13.4096</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 020 at RFM</td>
+<td>14.8849</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 021 at RFM</td>
+<td>14.5822</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 022 at RFM</td>
+<td>14.9630</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 023 at RFM</td>
+<td>14.0044</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 024 at RFM</td>
+<td>14.4683</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 025 at RFM</td>
+<td>14.0921</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 026 at RFM</td>
+<td>14.6151</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 027 at RFM</td>
+<td>13.8399</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 028 at RFM</td>
+<td>14.1848</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 029 at RFM</td>
+<td>13.7502</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 030 at RFM</td>
+<td>14.5315</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 031 at RFM</td>
+<td>14.3317</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 032 at RFM</td>
+<td>15.0057</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 033 at RFM</td>
+<td>14.4285</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 034 at RFM</td>
+<td>13.8030</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 035 at RFM</td>
+<td>14.5865</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 036 at RFM</td>
+<td>14.5043</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 037 at RFM</td>
+<td>14.6961</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 038 at RFM</td>
+<td>14.3648</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 039 at RFM</td>
+<td>14.6428</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 040 at RFM</td>
+<td>14.4501</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 041 at RFM</td>
+<td>14.4364</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 042 at RFM</td>
+<td>14.7981</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 043 at RFM</td>
+<td>15.0690</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 044 at RFM</td>
+<td>14.7341</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 045 at RFM</td>
+<td>14.4433</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 046 at RFM</td>
+<td>13.9942</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 047 at RFM</td>
+<td>14.7777</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 048 at RFM</td>
+<td class="errorBox">46.5820</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 049 at RFM</td>
+<td>14.3741</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 050 at RFM</td>
+<td>14.2123</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 051 at RFM</td>
+<td>13.9490</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 052 at RFM</td>
+<td class="errorBox">54.8061</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 053 at RFM</td>
+<td>13.1968</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>Channel 054 at RFM</td>
+<td>14.2168</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 055 at RFM</td>
+<td>14.1474</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 056 at RFM</td>
+<td class="errorBox">2.8780</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 057 at RFM</td>
+<td>13.4652</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 058 at RFM</td>
+<td>13.8068</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 059 at RFM</td>
+<td>15.2123</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 060 at RFM</td>
+<td class="errorBox">46.4151</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 061 at RFM</td>
+<td>14.5720</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 062 at RFM</td>
+<td>14.5756</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 063 at RFM</td>
+<td>14.5212</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 064 at RFM</td>
+<td>12.8245</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>Channel 065 at RFM</td>
+<td class="errorBox">47.5397</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 066 at RFM</td>
+<td>13.7460</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 067 at RFM</td>
+<td>14.5876</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 068 at RFM</td>
+<td>14.1807</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 069 at RFM</td>
+<td class="errorBox">6.6488</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 070 at RFM</td>
+<td>14.6229</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 071 at RFM</td>
+<td>14.5386</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 072 at RFM</td>
+<td>14.9645</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 073 at RFM</td>
+<td class="errorBox">5.6610</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 074 at RFM</td>
+<td>14.4554</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 075 at RFM</td>
+<td>14.1171</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 076 at RFM</td>
+<td>15.0119</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 077 at RFM</td>
+<td class="errorBox">1.8383</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 078 at RFM</td>
+<td>15.1817</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 079 at RFM</td>
+<td>14.2101</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 080 at RFM</td>
+<td>15.0949</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 081 at RFM</td>
+<td>14.3321</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 082 at RFM</td>
+<td>14.8578</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 083 at RFM</td>
+<td>14.3032</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 084 at RFM</td>
+<td>14.7603</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 085 at RFM</td>
+<td>13.2101</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>Channel 086 at RFM</td>
+<td>14.7826</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 087 at RFM</td>
+<td>14.4046</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 088 at RFM</td>
+<td>14.0447</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 089 at RFM</td>
+<td>14.6364</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 090 at RFM</td>
+<td>14.6453</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 091 at RFM</td>
+<td>14.8616</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 092 at RFM</td>
+<td>14.6556</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 093 at RFM</td>
+<td>14.7736</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 094 at RFM</td>
+<td>14.6182</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 095 at RFM</td>
+<td>14.3877</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 096 at RFM</td>
+<td>14.8948</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 097 at RFM</td>
+<td>14.5931</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 098 at RFM</td>
+<td>14.9166</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 099 at RFM</td>
+<td>14.6727</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 100 at RFM</td>
+<td>15.0351</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 101 at RFM</td>
+<td>14.6061</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 102 at RFM</td>
+<td>14.4819</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 103 at RFM</td>
+<td>14.5194</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 104 at RFM</td>
+<td>15.2850</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 105 at RFM</td>
+<td>14.4943</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 106 at RFM</td>
+<td>15.0710</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 107 at RFM</td>
+<td>14.0900</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 108 at RFM</td>
+<td>14.8179</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 109 at RFM</td>
+<td>14.2092</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 110 at RFM</td>
+<td>15.5678</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 111 at RFM</td>
+<td>14.1447</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 112 at RFM</td>
+<td>14.6592</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 113 at RFM</td>
+<td>14.5403</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 114 at RFM</td>
+<td>14.8652</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 115 at RFM</td>
+<td>14.1208</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 116 at RFM</td>
+<td>15.0872</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 117 at RFM</td>
+<td>14.7054</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 118 at RFM</td>
+<td>14.6487</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 119 at RFM</td>
+<td>14.0651</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 120 at RFM</td>
+<td>14.9339</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 121 at RFM</td>
+<td>14.2677</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 122 at RFM</td>
+<td>14.6124</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 123 at RFM</td>
+<td>14.2901</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 124 at RFM</td>
+<td>14.4217</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 125 at RFM</td>
+<td>13.6468</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 126 at RFM</td>
+<td>14.6170</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 127 at RFM</td>
+<td>13.6042</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 128 at RFM</td>
+<td>14.3714</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 129 at RFM</td>
+<td>14.1584</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 130 at RFM</td>
+<td>14.1238</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 131 at RFM</td>
+<td>14.6066</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 132 at RFM</td>
+<td>14.9099</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 133 at RFM</td>
+<td>14.7900</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 134 at RFM</td>
+<td>14.9906</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 135 at RFM</td>
+<td>14.2369</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 136 at RFM</td>
+<td>13.9364</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 137 at RFM</td>
+<td>14.8974</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 138 at RFM</td>
+<td>14.2607</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 139 at RFM</td>
+<td class="errorBox">44.3738</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 140 at RFM</td>
+<td>14.8874</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 141 at RFM</td>
+<td>14.5904</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 142 at RFM</td>
+<td>14.5994</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 143 at RFM</td>
+<td>14.5552</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 144 at RFM</td>
+<td>15.1317</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 145 at RFM</td>
+<td>14.8731</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 146 at RFM</td>
+<td>14.7791</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 147 at RFM</td>
+<td>14.7115</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 148 at RFM</td>
+<td>14.2065</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 149 at RFM</td>
+<td>14.5694</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 150 at RFM</td>
+<td>14.5592</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 151 at RFM</td>
+<td>14.6212</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 152 at RFM</td>
+<td>14.5901</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 153 at RFM</td>
+<td>14.2129</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 154 at RFM</td>
+<td>14.6312</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 155 at RFM</td>
+<td>14.6128</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 156 at RFM</td>
+<td>14.7729</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 157 at RFM</td>
+<td>14.4555</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 158 at RFM</td>
+<td>14.2829</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 159 at RFM</td>
+<td>15.1010</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 160 at RFM</td>
+<td>15.0149</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 161 at RFM</td>
+<td>14.4932</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 162 at RFM</td>
+<td>14.4541</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 163 at RFM</td>
+<td>14.1153</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 164 at RFM</td>
+<td>14.5470</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 165 at RFM</td>
+<td>14.6451</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 166 at RFM</td>
+<td>14.4412</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 167 at RFM</td>
+<td>14.5754</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 168 at RFM</td>
+<td>14.7301</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 169 at RFM</td>
+<td>14.1967</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 170 at RFM</td>
+<td>14.8868</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 171 at RFM</td>
+<td>14.2938</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 172 at RFM</td>
+<td>14.5844</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 173 at RFM</td>
+<td>14.6673</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 174 at RFM</td>
+<td>14.5380</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 175 at RFM</td>
+<td>14.3865</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 176 at RFM</td>
+<td>14.6844</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 177 at RFM</td>
+<td>14.4802</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 178 at RFM</td>
+<td class="errorBox">3.8702</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 179 at RFM</td>
+<td>13.9852</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 180 at RFM</td>
+<td>13.9223</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 181 at RFM</td>
+<td>12.9304</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>Channel 182 at RFM</td>
+<td class="errorBox">36.6745</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 183 at RFM</td>
+<td>12.4972</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>---- | ----------------</td>
+</tr>
+<tr>
+<td>Channel 184 at RFM</td>
+<td>13.7654</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 185 at RFM</td>
+<td>13.8639</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 186 at RFM</td>
+<td>21.1930</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------------------- | -</td>
+</tr>
+<tr>
+<td>Channel 187 at RFM</td>
+<td>12.3076</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>---- | ----------------</td>
+</tr>
+<tr>
+<td>Channel 188 at RFM</td>
+<td>13.9993</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 189 at RFM</td>
+<td>14.3993</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 190 at RFM</td>
+<td class="errorBox">3.6095</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+            &lt;--</td>
+</tr>
+<tr>
+<td>Channel 191 at RFM</td>
+<td>13.1729</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>Channel 192 at RFM</td>
+<td>13.9923</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 193 at RFM</td>
+<td>14.1827</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 194 at RFM</td>
+<td>14.0291</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 195 at RFM</td>
+<td class="errorBox">59.8456</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 196 at RFM</td>
+<td>15.2292</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 197 at RFM</td>
+<td>14.3861</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 198 at RFM</td>
+<td>14.5862</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 199 at RFM</td>
+<td class="errorBox">56.6932</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 200 at RFM</td>
+<td>13.9351</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 201 at RFM</td>
+<td>13.6700</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 202 at RFM</td>
+<td>15.1830</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 203 at RFM</td>
+<td class="errorBox">57.6551</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 204 at RFM</td>
+<td>15.4412</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 205 at RFM</td>
+<td>13.9269</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 206 at RFM</td>
+<td>15.4449</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 207 at RFM</td>
+<td class="errorBox">57.9752</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>
+			                   
+            --
+             &gt;
+        </td>
+</tr>
+<tr>
+<td>Channel 208 at RFM</td>
+<td>15.4800</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 209 at RFM</td>
+<td>13.8851</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 210 at RFM</td>
+<td>15.1626</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 211 at RFM</td>
+<td>14.5365</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 212 at RFM</td>
+<td>15.3643</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 213 at RFM</td>
+<td>13.7905</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 214 at RFM</td>
+<td>14.5150</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 215 at RFM</td>
+<td>14.1950</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 216 at RFM</td>
+<td>14.3883</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 217 at RFM</td>
+<td>13.9903</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 218 at RFM</td>
+<td>13.6930</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 219 at RFM</td>
+<td>14.4531</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 220 at RFM</td>
+<td>14.7893</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 221 at RFM</td>
+<td>13.4225</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 222 at RFM</td>
+<td>15.2180</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 223 at RFM</td>
+<td>14.2590</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 224 at RFM</td>
+<td>13.9266</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 225 at RFM</td>
+<td>13.8184</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 226 at RFM</td>
+<td>15.4985</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 227 at RFM</td>
+<td>14.6559</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 228 at RFM</td>
+<td>14.2812</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 229 at RFM</td>
+<td>12.4455</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>---- | ----------------</td>
+</tr>
+<tr>
+<td>Channel 230 at RFM</td>
+<td>15.2094</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 231 at RFM</td>
+<td>14.7922</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 232 at RFM</td>
+<td>14.8067</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 233 at RFM</td>
+<td>14.8675</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 234 at RFM</td>
+<td>15.0932</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 235 at RFM</td>
+<td>14.3481</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 236 at RFM</td>
+<td>14.1689</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 237 at RFM</td>
+<td>14.2599</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 238 at RFM</td>
+<td>15.0543</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 239 at RFM</td>
+<td>14.7274</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 240 at RFM</td>
+<td>15.1851</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>Channel 241 at RFM</td>
+<td>13.5849</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>Channel 242 at RFM</td>
+<td>14.9265</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 243 at RFM</td>
+<td>14.7302</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 244 at RFM</td>
+<td>14.4132</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 245 at RFM</td>
+<td>14.6418</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 246 at RFM</td>
+<td>14.8583</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 247 at RFM</td>
+<td>13.9259</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 248 at RFM</td>
+<td>14.5549</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 249 at RFM</td>
+<td>14.0363</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 250 at RFM</td>
+<td>14.0264</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 251 at RFM</td>
+<td>14.6481</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 252 at RFM</td>
+<td>14.8111</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 253 at RFM</td>
+<td>13.9508</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------- | -------------</td>
+</tr>
+<tr>
+<td>Channel 254 at RFM</td>
+<td>14.5758</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>Channel 255 at RFM</td>
+<td>13.7253</td>
+<td>10.0000</td>
+<td>22.0000</td>
+<td>------ | --------------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox">-- Test reset --</p>
+</body>
+</html>

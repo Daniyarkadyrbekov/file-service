@@ -1,0 +1,19 @@
+2021-02-02T08:27:55.090+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:27:55.090+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:27:55.096+0300	DEBUG	client/main.go:78	loading file success	{"code": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Tue, 02 Feb 2021 05:27:55 GMT"]}, "body": "Successfully Uploaded File\n"}
+2021-02-02T08:28:05.091+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:28:05.091+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:28:15.088+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:28:15.088+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:28:25.091+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:28:25.091+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:28:35.091+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:28:35.093+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:28:45.091+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:28:45.091+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:28:55.089+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:28:55.089+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:29:05.089+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:29:05.089+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}
+2021-02-02T08:29:15.092+0300	DEBUG	client/main.go:48	ticker loop
+2021-02-02T08:29:15.095+0300	DEBUG	client/main.go:55	fileWalk for file	{"fileName": "test/test.txt"}

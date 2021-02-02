@@ -22,29 +22,24 @@ var (
 )
 
 type Service struct {
-	serverUrl    string
-	uploadPeriod time.Duration
-	fileHashes   map[string]struct{}
-	logger       *zap.Logger
+	cfg        *Config
+	fileHashes map[string]struct{}
+	logsPath   string
+	logger     *zap.Logger
 }
 
 func New(cfg *Config, logger *zap.Logger) *Service {
 	return &Service{
-		serverUrl:    cfg.ServerUrl,
-		uploadPeriod: cfg.updatePeriod,
-		logger:       logger,
-		fileHashes:   make(map[string]struct{}),
+		cfg:        cfg,
+		logger:     logger,
+		fileHashes: make(map[string]struct{}),
+		logsPath:   cfg.LogsPath,
 	}
 }
 
 func (c *Service) Run() {
-	extraParams := map[string]string{
-		"title":       "My Document",
-		"author":      "Matt Aimonetti",
-		"description": "A document with all the Go programming language secrets",
-	}
 	client := &http.Client{}
-	t := time.NewTicker(10 * time.Second)
+	t := time.NewTicker(c.cfg.UpdatePeriod)
 	l := c.logger
 	for {
 		select {
@@ -52,14 +47,14 @@ func (c *Service) Run() {
 
 			l.Debug("ticker loop")
 
-			err := filepath.Walk("./logs",
+			err := filepath.Walk("./"+c.logsPath,
 				func(path string, info os.FileInfo, err error) error {
 					if info.IsDir() {
 						return nil
 					}
 					l.Debug("fileWalk for file", zap.String("fileName", path))
 
-					request, err := c.newFileUploadRequest(c.serverUrl, extraParams, "myFile", path)
+					request, err := c.newFileUploadRequest(c.cfg.ServerUrl, "myFile", path)
 					if err == errAlreadyExists {
 						return nil
 					}
@@ -96,7 +91,7 @@ func (c *Service) Run() {
 }
 
 // Creates a new file upload http request with optional extra params
-func (c *Service) newFileUploadRequest(uri string, params map[string]string, paramName, path string) (*http.Request, error) {
+func (c *Service) newFileUploadRequest(uri string, paramName, path string) (*http.Request, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
@@ -105,6 +100,7 @@ func (c *Service) newFileUploadRequest(uri string, params map[string]string, par
 
 	body := &bytes.Buffer{}
 	writer := multipart.NewWriter(body)
+	//defer writer.Close()
 	part, err := writer.CreateFormFile(paramName, path)
 	if err != nil {
 		return nil, err
@@ -126,6 +122,11 @@ func (c *Service) newFileUploadRequest(uri string, params map[string]string, par
 
 	_, err = io.Copy(part, &buf)
 
+	params := map[string]string{
+		"title":       "My Document",
+		"author":      "Matt Aimonetti",
+		"description": "A document with all the Go programming language secrets",
+	}
 	for key, val := range params {
 		_ = writer.WriteField(key, val)
 	}
@@ -133,15 +134,27 @@ func (c *Service) newFileUploadRequest(uri string, params map[string]string, par
 	if err != nil {
 		return nil, err
 	}
-
 	req, err := http.NewRequest("POST", uri, body)
+	if err != nil {
+		return nil, err
+	}
 	req.Header.Set("Content-Type", writer.FormDataContentType())
+	//req.Header.Set("Clinic-ID", c.cfg.ClinicID)
+	//req.Header.Set("Device-ID", c.cfg.DeviceID)
 	return req, err
+}
+
+func NewLogger() (*zap.Logger, error) {
+	cfg := zap.NewDevelopmentConfig()
+	cfg.OutputPaths = []string{
+		"./client.log",
+	}
+	return cfg.Build()
 }
 
 func main() {
 
-	l, err := zap.NewDevelopment()
+	l, err := NewLogger()
 	if err != nil {
 		log.Printf("create logger err = %s\n", err.Error())
 		return
@@ -156,6 +169,10 @@ func main() {
 	c := &Config{}
 	if err := viper.GetViper().Unmarshal(c); err != nil {
 		l.Error("unmarshal config", zap.Error(err))
+		return
+	}
+	if err := c.Check(); err != nil {
+		l.Error("cfg check err", zap.Error(err))
 		return
 	}
 
