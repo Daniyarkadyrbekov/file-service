@@ -1,0 +1,141 @@
+<html xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="cache-control" content="no-store">
+<meta http-equiv="pragma" content="no-cache">
+<style type="text/css">
+                table
+                {
+                border-collapse:collapse;
+                }
+                table, th, td
+                {
+                border: 1px solid black;
+                }
+                td
+                {
+                vertical-align:center;
+                padding: 5px;
+                }
+                body
+                {
+                color:#000000;
+                background-color:#b0c4de
+                }
+                a:link
+                {
+                text-decoration:none;
+                color:#000000
+                }
+                a:visited:
+                {
+                color:#000000
+                }
+                a:focus
+                {
+                color:#000000
+                }
+                a:hover
+                {
+                color:#000000
+                }
+                a:active
+                {
+                color:#000000
+                }
+                .biggerFont { font-weight:bold }
+                .errorBox { background-color:#ff0000; font-weight:bold; color:#ffffff; padding: 5px; }
+                .passedBox { background-color:#00ff00; font-weight:bold; color:#000000; padding: 5px; }
+                .headerBox { background-color:#ffffff; font-weight:bold; color:#000000; padding: 5px; }
+                .sectionBox { background-color:#e4f0fe; font-weight:bold; color:#000000; padding: 5px; }
+            </style>
+</head>
+<body>
+<table cellspacing="5">
+<tr>
+<td valign="center">
+<font class="biggerFont">Testname:</font>
+</td>
+<td valign="center">
+<font class="biggerFont">Service.All tests (all probes must be detached).RSP.Soll DAC check</font>
+</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Start Time:</font>
+</td>
+<td valign="center">13.October.2020  20:10:32</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">End Time:</font>
+</td>
+<td valign="center">13.October.2020  20:10:38</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Duration:</font>
+</td>
+<td valign="center">00:00:06</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Config File:</font>
+</td>
+<td valign="center">C:\V730\Distribution\Hardware\DAST_Hardware\BF_Test\Soll DAC check.ini</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">SW version:</font>
+</td>
+<td valign="center">EC320 17.0.3.2904  (Dec 06 2016, 04:11:38), BNr.:2904, SysDVD revision: 0</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RFM version:</font>
+</td>
+<td valign="center">PC: RFM423	FR: 10	AR: F	SN: 00945</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RSX version:</font>
+</td>
+<td valign="center">n.A.</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RTF version:</font>
+</td>
+<td valign="center">PC: RTF441	FR: 18	AR: A	SN: 00964</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RTP firmware:</font>
+</td>
+<td valign="center">Monitoring [56] -- Motor [19] -- DC/AC [12]</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Temperature:</font>
+</td>
+<td valign="center">PS: 30.06°C, IF-FPGA: 38.88°C, RFM [BF0: 46.63°C BF1: 45.65°C,  BF2: 48.60°C BF3: 48.48°C]</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Overall Result:</font>
+</td>
+<td valign="center">
+<font class="biggerFont passedBox">PASSED</font>
+</td>
+</tr>
+</table>
+<p class="headerBox">Test output:</p>
+<p>Simulating Soll DAC error.</p>
+<p>Setting HV_A to closest possible value of HV (4.5 V -&gt; DAC 203).</p>
+<p>Making sure Soll DAC is and stays good</p>
+<p>Setting HV_A to closest possible value of HV (5.5 V -&gt; DAC 248).</p>
+<p>Making sure Soll DAC results in an error</p>
+<p>Power supply returns errors ERRID_PS_HVA_N_V_HIGH, ERRID_PS_HVA_P_V_HIGH and ERRID_PS_ACTIVE_DISCHARGE (this is what we want to see).</p>
+<p class="sectionBox">-- Test reset --</p>
+</body>
+</html>

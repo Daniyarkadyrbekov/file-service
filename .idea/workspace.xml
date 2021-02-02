@@ -3,21 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="284644e1-d624-47f9-9a54-b509f1cd3fdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/subDir/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logs/subDir/subsubdir/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/export/log-voluson_000001.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/export/log-voluson_000001.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_world/hello_world" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_world/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/subDir/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/logs/subDir/subsubdir/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/devices/Unknown/Unknown/test/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +135,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/server/main.go</url>
-          <line>105</line>
+          <line>104</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

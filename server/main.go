@@ -16,7 +16,6 @@ func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		l.Debug("file Upload Endpoint Hit")
 
-		//if err r.ParseMultipartForm(10 << 20)
 		if err := r.ParseMultipartForm(100 << 20); err != nil {
 			l.Error("max file size exceeded", zap.Error(err))
 			w.WriteHeader(http.StatusBadRequest)
@@ -36,6 +35,7 @@ func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 			zap.String("fileName", handler.Filename),
 			zap.Int64("size", handler.Size),
 			zap.Any("header", handler.Header),
+			zap.Any("reqHeaders", r.Header),
 		)
 
 		// read all of the contents of our uploaded file into a
@@ -48,7 +48,7 @@ func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		tempFile, err := create(getFinalPath(handler.Filename, r))
+		tempFile, err := create(handler.Filename, r)
 		if err != nil {
 			logger.Error("error creating temp file", zap.Error(err))
 			w.WriteHeader(http.StatusInternalServerError)
@@ -64,30 +64,29 @@ func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 		// return that we have successfully uploaded our file!
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("Successfully Uploaded File\n"))
+		logger.Debug("Successfully Uploaded File")
 	}
-}
-
-func getFinalPath(fileName string, r *http.Request) string {
-	clinicID, deviceID := "Unknown", "Unknown"
-	if len(r.Header["Clinic-ID"]) == 1 {
-		clinicID = r.Header["Clinic-ID"][0]
-	}
-	if len(r.Header["Device-ID"]) == 1 {
-		clinicID = r.Header["Device-ID"][0]
-	}
-
-	return "./devices/" + clinicID + "/" + deviceID + "/" + strings.ReplaceAll(fileName, "\\", "/")
 }
 
 func check(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Successfully checked\n")
 }
 
-func create(p string) (*os.File, error) {
-	if err := os.MkdirAll(filepath.Dir(p), 0770); err != nil {
+func create(fileName string, r *http.Request) (*os.File, error) {
+	clinicID, deviceID := "Unknown", "Unknown"
+	if len(r.Header["Clinic-Id"]) == 1 {
+		clinicID = r.Header["Clinic-Id"][0]
+	}
+	if len(r.Header["Device-Id"]) == 1 {
+		deviceID = r.Header["Device-Id"][0]
+	}
+
+	path := "./devices/" + clinicID + "/" + deviceID + "/" + strings.ReplaceAll(fileName, "\\", "/")
+
+	if err := os.MkdirAll(filepath.Dir(path), 0770); err != nil {
 		return nil, err
 	}
-	return os.Create(p)
+	return os.Create(path)
 }
 
 func NewLogger() (*zap.Logger, error) {

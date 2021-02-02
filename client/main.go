@@ -122,14 +122,14 @@ func (c *Service) newFileUploadRequest(uri string, paramName, path string) (*htt
 
 	_, err = io.Copy(part, &buf)
 
-	params := map[string]string{
-		"title":       "My Document",
-		"author":      "Matt Aimonetti",
-		"description": "A document with all the Go programming language secrets",
-	}
-	for key, val := range params {
-		_ = writer.WriteField(key, val)
-	}
+	//params := map[string]string{
+	//	"title":       "My Document",
+	//	"author":      "Matt Aimonetti",
+	//	"description": "A document with all the Go programming language secrets",
+	//}
+	//for key, val := range params {
+	//	_ = writer.WriteField(key, val)
+	//}
 	err = writer.Close()
 	if err != nil {
 		return nil, err
@@ -139,8 +139,8 @@ func (c *Service) newFileUploadRequest(uri string, paramName, path string) (*htt
 		return nil, err
 	}
 	req.Header.Set("Content-Type", writer.FormDataContentType())
-	//req.Header.Set("Clinic-ID", c.cfg.ClinicID)
-	//req.Header.Set("Device-ID", c.cfg.DeviceID)
+	req.Header.Set("Clinic-ID", c.cfg.ClinicID)
+	req.Header.Set("Device-ID", c.cfg.DeviceID)
 	return req, err
 }
 
