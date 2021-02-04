@@ -12,6 +12,9 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/prometheus/client_golang/prometheus/promhttp"
+
+	"github.com/file-service.git/client/metrics"
 	"github.com/ory/viper"
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
@@ -26,15 +29,22 @@ type Service struct {
 	fileHashes map[string]struct{}
 	logsPath   string
 	logger     *zap.Logger
+	metrics    metrics.Metrics
 }
 
-func New(cfg *Config, logger *zap.Logger) *Service {
+func New(cfg *Config, logger *zap.Logger) (*Service, error) {
+	m, err := metrics.New("files_client")
+	if err != nil {
+		return nil, err
+	}
+
 	return &Service{
 		cfg:        cfg,
 		logger:     logger,
 		fileHashes: make(map[string]struct{}),
 		logsPath:   cfg.LogsPath,
-	}
+		metrics:    m,
+	}, nil
 }
 
 func (c *Service) Run() {
@@ -46,6 +56,7 @@ func (c *Service) Run() {
 	for {
 		select {
 		case <-t.C:
+			c.metrics.IncTicker()
 
 			l.Debug("ticker loop")
 
@@ -124,14 +135,6 @@ func (c *Service) newFileUploadRequest(uri string, paramName, path string) (*htt
 
 	_, err = io.Copy(part, &buf)
 
-	//params := map[string]string{
-	//	"title":       "My Document",
-	//	"author":      "Matt Aimonetti",
-	//	"description": "A document with all the Go programming language secrets",
-	//}
-	//for key, val := range params {
-	//	_ = writer.WriteField(key, val)
-	//}
 	err = writer.Close()
 	if err != nil {
 		return nil, err
@@ -178,6 +181,15 @@ func main() {
 		return
 	}
 
-	svc := New(c, l)
+	svc, err := New(c, l)
+	if err != nil {
+		l.Error("service creation err", zap.Error(err))
+		return
+	}
+
+	go func() {
+		http.Handle("/metrics", promhttp.Handler())
+	}()
+
 	svc.Run()
 }

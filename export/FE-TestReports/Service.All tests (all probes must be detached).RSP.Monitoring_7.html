@@ -1,0 +1,514 @@
+<html xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="cache-control" content="no-store">
+<meta http-equiv="pragma" content="no-cache">
+<style type="text/css">
+                table
+                {
+                border-collapse:collapse;
+                }
+                table, th, td
+                {
+                border: 1px solid black;
+                }
+                td
+                {
+                vertical-align:center;
+                padding: 5px;
+                }
+                body
+                {
+                color:#000000;
+                background-color:#b0c4de
+                }
+                a:link
+                {
+                text-decoration:none;
+                color:#000000
+                }
+                a:visited:
+                {
+                color:#000000
+                }
+                a:focus
+                {
+                color:#000000
+                }
+                a:hover
+                {
+                color:#000000
+                }
+                a:active
+                {
+                color:#000000
+                }
+                .biggerFont { font-weight:bold }
+                .errorBox { background-color:#ff0000; font-weight:bold; color:#ffffff; padding: 5px; }
+                .passedBox { background-color:#00ff00; font-weight:bold; color:#000000; padding: 5px; }
+                .headerBox { background-color:#ffffff; font-weight:bold; color:#000000; padding: 5px; }
+                .sectionBox { background-color:#e4f0fe; font-weight:bold; color:#000000; padding: 5px; }
+            </style>
+</head>
+<body>
+<table cellspacing="5">
+<tr>
+<td valign="center">
+<font class="biggerFont">Testname:</font>
+</td>
+<td valign="center">
+<font class="biggerFont">Service.All tests (all probes must be detached).RSP.Monitoring</font>
+</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Start Time:</font>
+</td>
+<td valign="center">13.October.2020  20:06:49</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">End Time:</font>
+</td>
+<td valign="center">13.October.2020  20:06:51</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Duration:</font>
+</td>
+<td valign="center">00:00:02</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Config File:</font>
+</td>
+<td valign="center">C:\V730\Distribution\Hardware\DAST_Hardware\BF_Test\Monitoring.ini</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">SW version:</font>
+</td>
+<td valign="center">EC320 17.0.3.2904  (Dec 06 2016, 04:11:38), BNr.:2904, SysDVD revision: 0</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RFM version:</font>
+</td>
+<td valign="center">PC: RFM423	FR: 10	AR: F	SN: 00945</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RSX version:</font>
+</td>
+<td valign="center">n.A.</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RTF version:</font>
+</td>
+<td valign="center">PC: RTF441	FR: 18	AR: A	SN: 00964</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">RTP firmware:</font>
+</td>
+<td valign="center">Monitoring [56] -- Motor [19] -- DC/AC [12]</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Temperature:</font>
+</td>
+<td valign="center">PS: 30.22°C, IF-FPGA: 39.87°C, RFM [BF0: 44.79°C BF1: 44.30°C,  BF2: 47.00°C BF3: 46.51°C]</td>
+</tr>
+<tr>
+<td valign="center">
+<font class="biggerFont">Overall Result:</font>
+</td>
+<td valign="center">
+<font class="biggerFont passedBox">PASSED</font>
+</td>
+</tr>
+</table>
+<p class="headerBox">Tables (click to jump to it):</p><a href="#IDX0FDQC530PWZDXA11RL2MPL2MOHI0KH03RVHB2OO3U4KHC2FE5PC"><p>PS supply monitoring : PC and Fan Values</p></a><a href="#IDW4OBJ1O2DBQFJJXMOMQYQ1KWCCBUAFBQ4Q0ZKKJ0AFZMTQ10PMIH"><p>PS supply monitoring : FE Values</p></a><a href="#ID03QP1O5G3PGVOMANO5GM1DUYCBAYDYX4MRQ4ZPO1UX0AIPYHBGLL"><p>Power supply monitoring : ATX</p></a><a href="#IDSI2UAFG5BT2FEJ4VMZ2RLYQ2GIRE5GYNAQOWOUPH11XDFQTYS2BE"><p>PS supply monitoring : Temperatures</p></a><a href="#IDM0GR1VAT0HNYJLWK5H2V2O1IVDQ2EQUF1DDGEHKZ0KRYHW2R1NMI"><p>PS supply monitoring : Misc</p></a><a href="#ID1B2PPJVWQPHPCGX4GIS43FX5H43CZQTGAIZ1OMJO5053RMGABT"><p>PS supply monitoring : 2D supply</p></a><p class="headerBox">Test output:</p>
+<p><a name="IDX0FDQC530PWZDXA11RL2MPL2MOHI0KH03RVHB2OO3U4KHC2FE5PC"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">PS supply monitoring : PC and Fan Values</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Fan voltage [V] (for all fans)</td>
+<td>6.4050</td>
+<td>6.0610</td>
+<td>13.3980</td>
+<td>- | -------------------</td>
+</tr>
+<tr>
+<td>RSP-Fan current [A]</td>
+<td>0.1890</td>
+<td>0.1700</td>
+<td>0.9000</td>
+<td>- | -------------------</td>
+</tr>
+<tr>
+<td>PC-Fan current [A]</td>
+<td>0.1590</td>
+<td>0.0700</td>
+<td>0.9000</td>
+<td>-- | ------------------</td>
+</tr>
+</table></a></p>
+<p>RSP-Fan 1 ok</p>
+<p>RSP-Fan 2 ok</p>
+<p>RSP-Fan 3 ok</p>
+<p class="sectionBox"></p>
+<p><a name="IDW4OBJ1O2DBQFJJXMOMQYQ1KWCCBUAFBQ4Q0ZKKJ0AFZMTQ10PMIH"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">PS supply monitoring : FE Values</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>+12V FE [V]</td>
+<td>12.5270</td>
+<td>12.1030</td>
+<td>12.7270</td>
+<td>-------------- | ------</td>
+</tr>
+<tr>
+<td>+12V FE current [A]</td>
+<td>7.4820</td>
+<td>0.0000</td>
+<td>17000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>+5V FE [V]</td>
+<td>5.1170</td>
+<td>4.8950</td>
+<td>5.2000</td>
+<td>--------------- | -----</td>
+</tr>
+<tr>
+<td>+5V FE current [A]</td>
+<td>2.0880</td>
+<td>0.0000</td>
+<td>4000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>-5V FE [V]</td>
+<td>-5.0340</td>
+<td>-5.2000</td>
+<td>-4.8000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>-5V FE current [A]</td>
+<td>0.8150</td>
+<td>0.0000</td>
+<td>2000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>+12V S FE [V]</td>
+<td>12.4960</td>
+<td>11.8560</td>
+<td>12.7270</td>
+<td>--------------- | -----</td>
+</tr>
+<tr>
+<td>+12V S FE current [A]</td>
+<td>0.0140</td>
+<td>0.0000</td>
+<td>2000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>+5V S FE [V]</td>
+<td>5.0830</td>
+<td>4.8000</td>
+<td>5.2000</td>
+<td>-------------- | ------</td>
+</tr>
+<tr>
+<td>+5V S FE current [A]</td>
+<td>0.0090</td>
+<td>0.0000</td>
+<td>1000.0000</td>
+<td> | --------------------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox"></p>
+<p><a name="ID03QP1O5G3PGVOMANO5GM1DUYCBAYDYX4MRQ4ZPO1UX0AIPYHBGLL"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">Power supply monitoring : ATX</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>+12V ATX [V]</td>
+<td>12.3080</td>
+<td>12.1030</td>
+<td>12.5970</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>+12V ATX current [A]</td>
+<td>8.3510</td>
+<td>0.0000</td>
+<td>25000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>+12V MAIN ATX [V]</td>
+<td>12.2460</td>
+<td>12.1030</td>
+<td>12.5970</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>+12V UI ATX [V]</td>
+<td>12.2300</td>
+<td>12.1030</td>
+<td>12.5970</td>
+<td>----- | ---------------</td>
+</tr>
+<tr>
+<td>+5V ATX [V]</td>
+<td>5.0000</td>
+<td>4.9000</td>
+<td>5.2500</td>
+<td>------ | --------------</td>
+</tr>
+<tr>
+<td>+5V ATX current [A]</td>
+<td>3.1620</td>
+<td>0.0000</td>
+<td>10000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>+3.3V ATX [V]</td>
+<td>3.4070</td>
+<td>3.1350</td>
+<td>3.4650</td>
+<td>---------------- | ----</td>
+</tr>
+<tr>
+<td>+3.3V ATX current [A]</td>
+<td>1.9890</td>
+<td>0.0000</td>
+<td>6000.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>-12V ATX [V]</td>
+<td>-12.1260</td>
+<td>-12.6000</td>
+<td>-11.4000</td>
+<td>-------- | ------------</td>
+</tr>
+<tr>
+<td>5V SB ATX [V]</td>
+<td>5.0490</td>
+<td>4.7500</td>
+<td>5.2500</td>
+<td>------------ | --------</td>
+</tr>
+<tr>
+<td>5V SB ATX current [A]</td>
+<td>0.3900</td>
+<td>0.0000</td>
+<td>3500.0000</td>
+<td> | --------------------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox"></p>
+<p><a name="IDSI2UAFG5BT2FEJ4VMZ2RLYQ2GIRE5GYNAQOWOUPH11XDFQTYS2BE"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">PS supply monitoring : Temperatures</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Temperature HVA [°C]</td>
+<td>32.4802</td>
+<td>0.0000</td>
+<td>50.0000</td>
+<td>------------- | -------</td>
+</tr>
+<tr>
+<td>Temperature HVB [°C]</td>
+<td>29.1890</td>
+<td>0.0000</td>
+<td>50.0000</td>
+<td>------------ | --------</td>
+</tr>
+<tr>
+<td>Temperature FE [°C]</td>
+<td>30.2200</td>
+<td>0.0000</td>
+<td>60.0000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>Temperature PCB DCAC [°C]</td>
+<td>33.3928</td>
+<td>0.0000</td>
+<td>50.0000</td>
+<td>------------- | -------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox"></p>
+<p><a name="IDM0GR1VAT0HNYJLWK5H2V2O1IVDQ2EQUF1DDGEHKZ0KRYHW2R1NMI"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">PS supply monitoring : Misc</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Primary DCAC current [A]</td>
+<td>0.0000</td>
+<td>0.0000</td>
+<td>1200.0000</td>
+<td> | --------------------</td>
+</tr>
+<tr>
+<td>AC output DCAC [V]</td>
+<td>121.0000</td>
+<td>110.0000</td>
+<td>150.0000</td>
+<td>------ | ---------------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox"></p>
+<p><a name="ID1B2PPJVWQPHPCGX4GIS43FX5H43CZQTGAIZ1OMJO5053RMGABT"><table cellpadding="5" border="1">
+<tr>
+<td colspan="5">
+<font class="biggerFont">PS supply monitoring : 2D supply</font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="biggerFont">Var</font>
+</td>
+<td>
+<font class="biggerFont">Value</font>
+</td>
+<td>
+<font class="biggerFont">Min</font>
+</td>
+<td>
+<font class="biggerFont">Max</font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>+VDD voltage [V]</td>
+<td>3.5917</td>
+<td>2.5500</td>
+<td>4.7000</td>
+<td>---------- | ----------</td>
+</tr>
+<tr>
+<td>-VDD voltage [V]</td>
+<td>-3.2968</td>
+<td>-4.0100</td>
+<td>-2.4900</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>VDD DIG voltage [V]</td>
+<td>2.8055</td>
+<td>1.8000</td>
+<td>4.0100</td>
+<td>--------- | -----------</td>
+</tr>
+<tr>
+<td>VDD CC voltage [V]</td>
+<td>3.4483</td>
+<td>3.0000</td>
+<td>3.6200</td>
+<td>-------------- | ------</td>
+</tr>
+</table></a></p>
+<p class="sectionBox"></p>
+<p class="sectionBox">-- Test reset --</p>
+</body>
+</html>
