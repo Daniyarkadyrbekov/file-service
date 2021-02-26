@@ -88,6 +88,7 @@ func (c *Service) Run() {
 					//	zap.Any("header", resp.Header),
 					//	zap.Any("body", body),
 					//)
+					l.Debug("loading file success", zap.String("fileName", path))
 
 					return nil
 				})
