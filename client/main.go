@@ -12,11 +12,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/prometheus/client_golang/prometheus/promhttp"
-
 	"github.com/file-service.git/client/metrics"
 	"github.com/ory/viper"
 	"github.com/pkg/errors"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"go.uber.org/zap"
 )
 
@@ -27,7 +26,6 @@ var (
 type Service struct {
 	cfg        *Config
 	fileHashes map[string]struct{}
-	logsPath   string
 	logger     *zap.Logger
 	metrics    metrics.Metrics
 }
@@ -42,7 +40,6 @@ func New(cfg *Config, logger *zap.Logger) (*Service, error) {
 		cfg:        cfg,
 		logger:     logger,
 		fileHashes: make(map[string]struct{}),
-		logsPath:   cfg.LogsPath,
 		metrics:    m,
 	}, nil
 }
@@ -58,14 +55,12 @@ func (c *Service) Run() {
 		case <-t.C:
 			c.metrics.IncTicker()
 
-			l.Debug("ticker loop")
-
-			err := filepath.Walk("./"+c.logsPath,
+			err := filepath.Walk("./"+c.cfg.LogsPath,
 				func(path string, info os.FileInfo, err error) error {
 					if info.IsDir() {
 						return nil
 					}
-					l.Debug("fileWalk for file", zap.String("fileName", path))
+					//l.Debug("fileWalk for file", zap.String("fileName", path))
 
 					request, err := c.newFileUploadRequest(c.cfg.ServerUrl, "myFile", path)
 					if err == errAlreadyExists {
@@ -88,11 +83,11 @@ func (c *Service) Run() {
 						return err
 					}
 					resp.Body.Close()
-					l.Debug("loading file success",
-						zap.Int("code", resp.StatusCode),
-						zap.Any("header", resp.Header),
-						zap.Any("body", body),
-					)
+					//l.Debug("loading file success",
+					//	zap.Int("code", resp.StatusCode),
+					//	zap.Any("header", resp.Header),
+					//	zap.Any("body", body),
+					//)
 
 					return nil
 				})

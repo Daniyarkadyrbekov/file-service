@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Root>
-  <LogExceptions />
-  <LogMessages>------------------------------
-19:46:47: Db-structure Upgrade was not required
-</LogMessages>
-</Root>

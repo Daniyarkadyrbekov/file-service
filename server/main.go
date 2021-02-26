@@ -14,7 +14,7 @@ import (
 
 func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
-		l.Debug("file Upload Endpoint Hit")
+		//l.Debug("file Upload Endpoint Hit")
 
 		if err := r.ParseMultipartForm(100 << 20); err != nil {
 			l.Error("max file size exceeded", zap.Error(err))
@@ -64,7 +64,7 @@ func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 		// return that we have successfully uploaded our file!
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("Successfully Uploaded File\n"))
-		logger.Debug("Successfully Uploaded File")
+		//logger.Debug("Successfully Uploaded File")
 	}
 }
 
