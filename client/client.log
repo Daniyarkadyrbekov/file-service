@@ -1,0 +1,2 @@
+2021-03-01T22:35:26.708+0300	DEBUG	client/main.go:91	loading file success	{"fileName": "export/test/test.txt"}
+2021-03-01T22:44:59.569+0300	DEBUG	client/main.go:91	loading file success	{"fileName": "export/test/test.txt"}

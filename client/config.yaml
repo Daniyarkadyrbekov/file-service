@@ -1,6 +1,6 @@
-#server-url: "http://206.81.22.60:8080/upload"
-server-url: "http://localhost:8080/upload"
+server-url: "http://206.81.22.60:9123/upload"
+#server-url: "http://localhost:8080/upload"
 update-period: 1m
 logs-path: "./export"
-clinic-id: "kdm-mac2-clinic-id"
-device-id: "kdm-mac2-device-id"
+clinic-id: "elaman-local-clinic-id"
+device-id: "elaman-local-device-id"

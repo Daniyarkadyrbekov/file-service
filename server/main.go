@@ -109,6 +109,6 @@ func main() {
 	http.HandleFunc("/upload", uploadFile(l))
 	http.HandleFunc("/check", check)
 
-	err = http.ListenAndServe(":8080", nil)
+	err = http.ListenAndServe(":9123", nil)
 	l.Info("server finished with err", zap.Error(err))
 }
