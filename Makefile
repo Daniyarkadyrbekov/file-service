@@ -4,7 +4,7 @@ build-server-for-linux:
 
 .PHONY: build-client-for-windows
 build-client-for-windows:
-	env GOOS=windows GOARCH=amd64 go build -o ./bin/client ./client/*.go
+	env GOOS=windows GOARCH=amd64 go build -o ./bin/client3.exe ./client/*.go
 
 .PHONY: deploy-server-bin
 deploy-server-bin:

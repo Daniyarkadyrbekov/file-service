@@ -46,7 +46,7 @@ func New(cfg *Config, logger *zap.Logger) (*Service, error) {
 
 func (c *Service) Run() {
 	client := &http.Client{
-		Timeout: 5 * time.Second,
+		Timeout: 15 * time.Second,
 	}
 	t := time.NewTicker(c.cfg.UpdatePeriod)
 	l := c.logger
@@ -61,7 +61,7 @@ func (c *Service) Run() {
 						return nil
 					}
 					//l.Debug("fileWalk for file", zap.String("fileName", path))
-
+					l = l.With(zap.String("fileName", path))
 					request, err := c.newFileUploadRequest(c.cfg.ServerUrl, "myFile", path)
 					if err == errAlreadyExists {
 						return nil

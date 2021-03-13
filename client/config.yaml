@@ -1,6 +1,6 @@
 server-url: "http://206.81.22.60:9123/upload"
-#server-url: "http://localhost:8080/upload"
-update-period: 1m
-logs-path: "./export"
-clinic-id: "elaman-local-clinic-id"
-device-id: "elaman-local-device-id"
+#server-url: "http://localhost:9123/upload"
+update-period: 20s
+logs-path: "./export/test3"
+clinic-id: "test3-local-clinic-id"
+device-id: "test3-local-device-id"
