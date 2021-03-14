@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"fmt"
+	"hash"
 	"io"
 	"log"
 	"mime/multipart"
@@ -28,6 +29,7 @@ type Service struct {
 	fileHashes map[string]struct{}
 	logger     *zap.Logger
 	metrics    metrics.Metrics
+	hash hash.Hash
 }
 
 func New(cfg *Config, logger *zap.Logger) (*Service, error) {
@@ -60,7 +62,6 @@ func (c *Service) Run() {
 					if info.IsDir() {
 						return nil
 					}
-					//l.Debug("fileWalk for file", zap.String("fileName", path))
 					l = l.With(zap.String("fileName", path))
 					request, err := c.newFileUploadRequest(c.cfg.ServerUrl, "myFile", path)
 					if err == errAlreadyExists {
@@ -76,6 +77,11 @@ func (c *Service) Run() {
 						return err
 					}
 
+					l := l.With(zap.Int("status", resp.StatusCode), zap.Any("header", resp.Header))
+					if resp.StatusCode != http.StatusOK {
+						l.Debug("loading file err", zap.Int("status", resp.StatusCode))
+					}
+
 					body := &bytes.Buffer{}
 					_, err = body.ReadFrom(resp.Body)
 					if err != nil {
@@ -83,12 +89,10 @@ func (c *Service) Run() {
 						return err
 					}
 					resp.Body.Close()
-					//l.Debug("loading file success",
-					//	zap.Int("code", resp.StatusCode),
-					//	zap.Any("header", resp.Header),
-					//	zap.Any("body", body),
-					//)
-					l.Debug("loading file success", zap.String("fileName", path))
+
+					l.Debug("loading file success")
+
+					c.fileHashes[fmt.Sprintf("%x", c.hash.Sum(nil))] = struct{}{}
 
 					return nil
 				})
@@ -118,16 +122,15 @@ func (c *Service) newFileUploadRequest(uri string, paramName, path string) (*htt
 	var buf bytes.Buffer
 	tee := io.TeeReader(file, &buf)
 
-	h := sha256.New()
-	h.Write([]byte(path))
-	if _, err := io.Copy(h, tee); err != nil {
+	c.hash = sha256.New()
+	c.hash.Write([]byte(path))
+	if _, err := io.Copy(c.hash, tee); err != nil {
 		return nil, errors.Wrap(err, "copy to hash err")
 	}
 
-	if _, exists := c.fileHashes[fmt.Sprintf("%x", h.Sum(nil))]; exists {
+	if _, exists := c.fileHashes[fmt.Sprintf("%x", c.hash.Sum(nil))]; exists {
 		return nil, errAlreadyExists
 	}
-	c.fileHashes[fmt.Sprintf("%x", h.Sum(nil))] = struct{}{}
 
 	_, err = io.Copy(part, &buf)
 
@@ -160,6 +163,17 @@ func main() {
 		log.Printf("create logger err = %s\n", err.Error())
 		return
 	}
+
+	defer func() {
+		if err := recover(); err != nil {
+			l.Error("panic occurred:", zap.Any("err", err))
+		}
+	}()
+	defer func() {
+		l.Info("client closed")
+	}()
+
+	l.Info("client started")
 
 	viper.SetConfigFile("config.yaml")
 	if err := viper.ReadInConfig(); err != nil {

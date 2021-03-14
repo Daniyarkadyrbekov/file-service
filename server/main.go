@@ -15,8 +15,8 @@ import (
 func uploadFile(l *zap.Logger) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 
-		//if err := r.ParseMultipartForm(1 * 1024 * 1024); err != nil {
-		//	l.Error("max file size exceeded", zap.Error(err))
+		//if err := r.ParseMultipartForm(1); err != nil {
+		//	l.Error("max file size exceeded", zap.Error(nil))
 		//	w.WriteHeader(http.StatusBadRequest)
 		//	w.Write([]byte("max file size"))
 		//	return
@@ -97,11 +97,21 @@ func NewLogger() (*zap.Logger, error) {
 }
 
 func main() {
+
 	l, err := NewLogger()
 	if err != nil {
 		log.Printf("create logger err = %s\n", err.Error())
 		return
 	}
+
+	defer func() {
+		if err := recover(); err != nil {
+			l.Error("panic occurred:", zap.Any("err", err))
+		}
+	}()
+	defer func() {
+		l.Info("server closed")
+	}()
 
 	l.Info("server started")
 
