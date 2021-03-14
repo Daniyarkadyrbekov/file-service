@@ -1,2 +1,2 @@
-2021-03-13T14:42:36.907+0300	DEBUG	client/main.go:91	loading file success	{"fileName": "export/test3/test3"}
-2021-03-13T14:49:50.959+0300	DEBUG	client/main.go:91	loading file success	{"fileName": "export/test3/test3"}
+2021-03-14T18:27:12.017+0300	INFO	client/main.go:176	client started
+2021-03-14T18:27:32.032+0300	DEBUG	client/main.go:93	loading file success	{"fileName": "export/test4/test4.txt", "status": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Sun, 14 Mar 2021 15:27:32 GMT"]}}
