@@ -97,7 +97,7 @@ func NewLogger() (*zap.Logger, error) {
 }
 
 func main() {
-	l, err := NewLogger()
+	l, err := NewLogger() 
 	if err != nil {
 		log.Printf("create logger err = %s\n", err.Error())
 		return
