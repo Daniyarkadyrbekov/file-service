@@ -3,4 +3,4 @@ server-url: "http://206.81.22.60:9123/upload"
 update-period: 1m
 logs-path: "./export"
 clinic-id: "KDF_Moscow"
-device-id: "Voluson_E10_E75115"
+device-id: "Voluson_E06REAL_E75115"
