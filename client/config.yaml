@@ -1,6 +1,6 @@
 #server-url: "http://206.81.22.60:9123/upload"
 server-url: "http://localhost:9123/upload"
-update-period: 20s
-logs-path: "./export/test4"
-clinic-id: "test4-local-clinic-id"
-device-id: "test4-local-device-id"
+update-period: 1m
+logs-path: "./test-logs-examples/small"
+clinic-id: "test5-local-clinic-id"
+device-id: "test5-local-device-id"

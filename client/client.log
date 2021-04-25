@@ -1,2 +1,85 @@
-2021-03-14T18:27:12.017+0300	INFO	client/main.go:176	client started
-2021-03-14T18:27:32.032+0300	DEBUG	client/main.go:93	loading file success	{"fileName": "export/test4/test4.txt", "status": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Sun, 14 Mar 2021 15:27:32 GMT"]}}
+2021-04-24T19:22:15.926+0300	INFO	client/main.go:38	client started
+2021-04-24T19:22:15.929+0300	ERROR	service/service.go:92	making request err	{"fileName": "test-logs-examples/small/small_file.txt", "error": "Post \"http://localhost:9123/upload\": http: ContentLength=301 with Body length 369"}
+github.com/file-service/client/service.(*Service).uploadDirFiles.func1
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:92
+path/filepath.walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:414
+path/filepath.walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:438
+path/filepath.Walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:501
+github.com/file-service/client/service.(*Service).uploadDirFiles
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:72
+github.com/file-service/client/service.(*Service).Run
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:53
+main.main
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/main.go:66
+runtime.main
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/runtime/proc.go:225
+2021-04-24T19:23:15.930+0300	ERROR	service/service.go:92	making request err	{"fileName": "test-logs-examples/small/small_file.txt", "error": "Post \"http://localhost:9123/upload\": http: ContentLength=301 with Body length 369"}
+github.com/file-service/client/service.(*Service).uploadDirFiles.func1
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:92
+path/filepath.walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:414
+path/filepath.walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:438
+path/filepath.Walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:501
+github.com/file-service/client/service.(*Service).uploadDirFiles
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:72
+github.com/file-service/client/service.(*Service).Run
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:63
+main.main
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/main.go:66
+runtime.main
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/runtime/proc.go:225
+2021-04-25T17:53:10.211+0300	INFO	client/main.go:38	client started
+2021-04-25T17:53:10.217+0300	DEBUG	service/service.go:109	loading file success	{"fileName": "test-logs-examples/small/small_file.txt", "status": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Sun, 25 Apr 2021 14:53:10 GMT"]}}
+2021-04-25T17:53:10.218+0300	INFO	client/main.go:35	client closed
+2021-04-25T17:53:10.218+0300	ERROR	client/main.go:31	panic occurred:	{"err": "assignment to entry in nil map"}
+main.main.func1
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/main.go:31
+runtime.gopanic
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/runtime/panic.go:965
+runtime.mapassign_faststr
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/runtime/map_faststr.go:204
+github.com/file-service/client/hashes.(*Hashes).Put
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/hashes/hashes.go:37
+github.com/file-service/client/service.(*Service).uploadDirFiles.func1
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:111
+path/filepath.walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:414
+path/filepath.walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:438
+path/filepath.Walk
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/path/filepath/path.go:501
+github.com/file-service/client/service.(*Service).uploadDirFiles
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:72
+github.com/file-service/client/service.(*Service).Run
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/service/service.go:53
+main.main
+	/Users/d.kadyrbekov/Desktop/umeford/github/file-service/client/main.go:66
+runtime.main
+	/Users/d.kadyrbekov/sdk/go1.16.3/src/runtime/proc.go:225
+2021-04-25T17:55:11.031+0300	INFO	client/main.go:38	client started
+2021-04-25T17:55:11.035+0300	DEBUG	service/service.go:109	loading file success	{"fileName": "test-logs-examples/small/small_file.txt", "status": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Sun, 25 Apr 2021 14:55:11 GMT"]}}
+2021-04-25T17:59:45.519+0300	INFO	client/main.go:38	client started
+2021-04-25T17:59:45.523+0300	DEBUG	service/service.go:109	loading file success	{"fileName": "test-logs-examples/small/small_file.txt", "status": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Sun, 25 Apr 2021 14:59:45 GMT"]}}
+2021-04-25T18:01:51.994+0300	INFO	client/main.go:38	client started
+2021-04-25T18:01:51.998+0300	DEBUG	service/service.go:109	loading file success	{"fileName": "test-logs-examples/small/small_file.txt", "status": 200, "header": {"Content-Length":["27"],"Content-Type":["text/plain; charset=utf-8"],"Date":["Sun, 25 Apr 2021 15:01:51 GMT"]}}
+2021-04-25T18:02:51.998+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:03:52.000+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:04:51.998+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:05:51.996+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:06:52.002+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:07:52.000+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:08:51.999+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:09:51.998+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:10:52.005+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:11:52.005+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:12:52.003+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:17:51.530+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:51:34.771+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T18:52:34.796+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T20:16:41.360+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
+2021-04-25T20:17:41.384+0300	DEBUG	hashes/hashes.go:78	unload err	{"error": "write ./hashes.txt: bad file descriptor"}
