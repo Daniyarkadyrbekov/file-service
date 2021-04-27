@@ -30,7 +30,7 @@ func New(cfg *Config, logger *zap.Logger) (*Service, error) {
 		return nil, err
 	}
 
-	h, err := hashes.New("./hashes.txt", time.Minute, logger)
+	h, err := hashes.New(cfg.HashesCfg.HashesPath, logger)
 	if err != nil {
 		return nil, err
 	}

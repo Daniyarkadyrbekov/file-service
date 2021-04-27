@@ -3,6 +3,8 @@ package service
 import (
 	"errors"
 	"time"
+
+	"github.com/file-service/client/hashes"
 )
 
 type Config struct {
@@ -11,6 +13,7 @@ type Config struct {
 	LogsPath     string        `mapstructure:"logs-path"`
 	ClinicID     string        `mapstructure:"clinic-id"`
 	DeviceID     string        `mapstructure:"device-id"`
+	HashesCfg    hashes.Config `mapstructure:"hashes"`
 }
 
 func (c *Config) Check() error {
@@ -24,6 +27,10 @@ func (c *Config) Check() error {
 
 	if c.LogsPath == "" {
 		return errors.New("empty logs path")
+	}
+
+	if err := c.HashesCfg.Check(); err != nil {
+		return err
 	}
 
 	return nil
