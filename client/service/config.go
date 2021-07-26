@@ -8,12 +8,13 @@ import (
 )
 
 type Config struct {
-	ServerUrl    string        `mapstructure:"server-url"`
-	UpdatePeriod time.Duration `mapstructure:"update-period"`
-	LogsPath     string        `mapstructure:"logs-path"`
-	ClinicID     string        `mapstructure:"clinic-id"`
-	DeviceID     string        `mapstructure:"device-id"`
-	HashesCfg    hashes.Config `mapstructure:"hashes"`
+	ServerUrl        string        `mapstructure:"server-url"`
+	UpdatePeriod     time.Duration `mapstructure:"update-period"`
+	LogsPath         string        `mapstructure:"logs-path"`
+	ClinicID         string        `mapstructure:"clinic-id"`
+	DeviceID         string        `mapstructure:"device-id"`
+	LoadFilesRegexps []string      `mapstructure:"load-files-reg-exp"`
+	HashesCfg        hashes.Config `mapstructure:"hashes"`
 }
 
 func (c *Config) Check() error {

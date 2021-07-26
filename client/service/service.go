@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"regexp"
 	"time"
 
 	"github.com/file-service/client/hashes"
@@ -22,6 +23,7 @@ type Service struct {
 	hashes  *hashes.Hashes
 	logger  *zap.Logger
 	metrics metrics.Metrics
+	regExps []*regexp.Regexp
 }
 
 func New(cfg *Config, logger *zap.Logger) (*Service, error) {
@@ -35,11 +37,21 @@ func New(cfg *Config, logger *zap.Logger) (*Service, error) {
 		return nil, err
 	}
 
+	rExps := make([]*regexp.Regexp, 0)
+	for _, exp := range cfg.LoadFilesRegexps {
+		compExp, err := regexp.Compile(exp)
+		if err != nil {
+			return nil, err
+		}
+		rExps = append(rExps, compExp)
+	}
+
 	return &Service{
 		cfg:     cfg,
 		logger:  logger,
 		hashes:  h,
 		metrics: m,
+		regExps: rExps,
 	}, nil
 }
 
@@ -68,7 +80,7 @@ func (c *Service) Run() {
 	}
 }
 
-func (c *Service) uploadDirFiles(l *zap.Logger, path string, client *http.Client) error {
+func (c *Service) uploadDirFiles(logger *zap.Logger, path string, client *http.Client) error {
 	err := filepath.Walk(path,
 		func(path string, info os.FileInfo, err error) error {
 
@@ -76,7 +88,24 @@ func (c *Service) uploadDirFiles(l *zap.Logger, path string, client *http.Client
 				return nil
 			}
 
-			l = l.With(zap.String("fileName", path))
+			matched := len(c.regExps) == 0
+			for _, exp := range c.regExps {
+				if exp.MatchString(path) {
+					matched = true
+					break
+				}
+			}
+			if !matched {
+				logger.Debug("skip path not matched regexp", zap.String("path", path))
+				return nil
+			}
+
+			if info.Size() > 1024*1024*200 {
+				logger.Error("file size more than 200MB", zap.String("fileName", info.Name()), zap.Int64("size", info.Size()))
+				return nil
+			}
+
+			l := logger.With(zap.String("fileName", path))
 			request, fileHash, err := c.newFileUploadRequest(c.cfg.ServerUrl, "myFile", path)
 			if err != nil {
 				l.Error("getting request err", zap.Error(err))
@@ -93,7 +122,7 @@ func (c *Service) uploadDirFiles(l *zap.Logger, path string, client *http.Client
 				return nil
 			}
 
-			l := l.With(zap.Int("status", resp.StatusCode), zap.Any("header", resp.Header))
+			l = l.With(zap.Int("status", resp.StatusCode), zap.Any("header", resp.Header))
 			if resp.StatusCode != http.StatusOK {
 				l.Debug("loading file err", zap.Int("status", resp.StatusCode))
 			}
